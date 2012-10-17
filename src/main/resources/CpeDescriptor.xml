@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpeDescription xmlns="http://uima.apache.org/resourceSpecifier">
+
+  <collectionReader>
+    <collectionIterator>
+      <descriptor>
+        <import location="descriptors/collectionReaderDescriptor.xml"/>
+      </descriptor>
+      <configurationParameterSettings>
+        <nameValuePair>
+          <name>InputFile</name>
+          <value><string>src/main/resources/data/sample.in</string></value>
+        </nameValuePair>
+      </configurationParameterSettings>
+    </collectionIterator>
+  </collectionReader>
+  <casProcessors casPoolSize="2" processingUnitThreadCount="1">
+    <casProcessor deployment="integrated" name="Gene Name Entity Recognizer">
+      <descriptor>
+        <import location="descriptors/aeDescriptor.xml"/>
+      </descriptor>
+      <deploymentParameters/>
+      <errorHandling>
+        <errorRateThreshold action="terminate" value="100/1000"/>
+        <maxConsecutiveRestarts action="terminate" value="30"/>
+        <timeout max="100000"/>
+      </errorHandling>
+      <checkpoint batch="100" time="1000ms"/>
+    </casProcessor>
+    <casProcessor deployment="integrated" name="Output Writer">
+      <descriptor>
+        <import location="descriptors/casConsumerDescriptor.xml"/>
+      </descriptor>
+      <configurationParameterSettings>
+        <nameValuePair>
+          <name>OutputFile</name>
+          <value><string>src/main/resources/data/out</string></value>
+        </nameValuePair>
+      </configurationParameterSettings>
+      
+      <deploymentParameters/>
+      <errorHandling>
+        <errorRateThreshold action="terminate" value="100/1000"/>
+        <maxConsecutiveRestarts action="terminate" value="30"/>
+        <timeout max="100000" default="-1"/>
+      </errorHandling>
+      <checkpoint batch="100" time="1000ms"/>
+    </casProcessor>
+
+  </casProcessors>
+
+  <cpeConfig>
+    <numToProcess>-1</numToProcess>
+    <deployAs>immediate</deployAs>
+    <checkpoint file="" time="3000ms"/>
+    <timerImpl>
+    </timerImpl>
+  </cpeConfig>
+  
+</cpeDescription>

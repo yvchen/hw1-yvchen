@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>edu.cmu.lti.11791.f12.hw1</groupId>
   <artifactId>hw1-yvchen</artifactId>
-  <version>0.0.3</version>
+  <version>0.0.4</version>
   <scm>
   	<connection>scm:git:git@github.com:yvchen/hw1-yvchen.git</connection>
   	<developerConnection>scm:git:git@github.com:yvchen/hw1-yvchen.git</developerConnection>
@@ -49,29 +49,25 @@
             </configuration>
           </execution>
         </executions>
-      </plugin>
-      <plugin>
-      
-<groupId>org.apache.maven.plugins</groupId>
-<artifactId>maven-install-plugin</artifactId>
-  <executions>
-    <execution>
-    	<goals>
-    	<goal>install-file</goal>
-		</goals>
-	<configuration>
-		<resources>
-			<resource>
-				<directory>hw1-yvchen/jar</directory>
-			</resource>
-        </resources>
-    </configuration>
-  </execution>
-  </executions>
-</plugin>
+      </plugin>      
     </plugins>
   </build>
   <dependencies>
+      <dependency>
+      <groupId>lingpipe</groupId>
+      <artifactId>lingpipe</artifactId>
+      <version>4.1.0</version>
+    </dependency>
+      <dependency>
+      <groupId>JNET</groupId>
+      <artifactId>JNET</artifactId>
+      <version>1.5</version>
+    </dependency>
+      <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+    </dependency>
     <dependency>
       <groupId>org.apache.uima</groupId>
       <artifactId>uimaj-core</artifactId>

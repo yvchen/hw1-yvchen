@@ -38,10 +38,10 @@ class FeatureGenerator {
 	static String GREEK = "(alpha|beta|gamma|delta|epsilon|zeta|eta|theta|iota|kappa|lambda|mu|nu|xi|omicron|pi|rho|sigma|tau|upsilon|phi|chi|psi|omega)";
 
 	// all upper case letters (consider different languages, too)
-	static String CAPS = "A-ZÁÉÍÓÚÀÈÌÒÙÇÑÏÄÖÜ";
+	static String CAPS = "";
 
 	// all lower case letters (consider different languages, too)
-	static String LOW = "a-zàèìòùáéíóúçñïäöü";
+	static String LOW = "";
 
 	static public InstanceList createFeatureData(ArrayList<Sentence> sentences,
 			LabelAlphabet dict, Properties featureConfig) {

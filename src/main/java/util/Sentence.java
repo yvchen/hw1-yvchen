@@ -1,6 +1,6 @@
 
 
-/* First created by JCasGen Tue Oct 16 09:20:45 EDT 2012 */
+/* First created by JCasGen Wed Oct 17 15:05:29 EDT 2012 */
 package util;
 
 import org.apache.uima.jcas.JCas; 
@@ -11,8 +11,8 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Oct 16 17:38:05 EDT 2012
- * XML source: E:/Homework/Software Engineering/hw1-yvchen/src/main/resources/descriptors/typeSystemDescriptor.xml
+ * Updated by JCasGen Wed Oct 17 15:05:29 EDT 2012
+ * XML source: E:/Homework/Software Engineering/hw1-yvchen/src/main/resources/typeSystem/typeSystemDescriptor.xml
  * @generated */
 public class Sentence extends Annotation {
   /** @generated

@@ -1,5 +1,5 @@
 
-/* First created by JCasGen Tue Oct 16 09:20:45 EDT 2012 */
+/* First created by JCasGen Wed Oct 17 15:05:29 EDT 2012 */
 package util;
 
 import org.apache.uima.jcas.JCas;
@@ -14,7 +14,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Oct 16 17:38:05 EDT 2012
+ * Updated by JCasGen Wed Oct 17 15:05:29 EDT 2012
  * @generated */
 public class NameEntity_Type extends Annotation_Type {
   /** @generated */
@@ -45,20 +45,20 @@ public class NameEntity_Type extends Annotation_Type {
   public final static boolean featOkTst = JCasRegistry.getFeatOkTst("util.NameEntity");
  
   /** @generated */
-  final Feature casFeat_sent;
+  final Feature casFeat_label;
   /** @generated */
-  final int     casFeatCode_sent;
+  final int     casFeatCode_label;
   /** @generated */ 
-  public int getSent(int addr) {
-        if (featOkTst && casFeat_sent == null)
-      jcas.throwFeatMissing("sent", "util.NameEntity");
-    return ll_cas.ll_getRefValue(addr, casFeatCode_sent);
+  public String getLabel(int addr) {
+        if (featOkTst && casFeat_label == null)
+      jcas.throwFeatMissing("label", "util.NameEntity");
+    return ll_cas.ll_getStringValue(addr, casFeatCode_label);
   }
   /** @generated */    
-  public void setSent(int addr, int v) {
-        if (featOkTst && casFeat_sent == null)
-      jcas.throwFeatMissing("sent", "util.NameEntity");
-    ll_cas.ll_setRefValue(addr, casFeatCode_sent, v);}
+  public void setLabel(int addr, String v) {
+        if (featOkTst && casFeat_label == null)
+      jcas.throwFeatMissing("label", "util.NameEntity");
+    ll_cas.ll_setStringValue(addr, casFeatCode_label, v);}
     
   
  
@@ -79,6 +79,24 @@ public class NameEntity_Type extends Annotation_Type {
     ll_cas.ll_setStringValue(addr, casFeatCode_text, v);}
     
   
+ 
+  /** @generated */
+  final Feature casFeat_sent;
+  /** @generated */
+  final int     casFeatCode_sent;
+  /** @generated */ 
+  public int getSent(int addr) {
+        if (featOkTst && casFeat_sent == null)
+      jcas.throwFeatMissing("sent", "util.NameEntity");
+    return ll_cas.ll_getRefValue(addr, casFeatCode_sent);
+  }
+  /** @generated */    
+  public void setSent(int addr, int v) {
+        if (featOkTst && casFeat_sent == null)
+      jcas.throwFeatMissing("sent", "util.NameEntity");
+    ll_cas.ll_setRefValue(addr, casFeatCode_sent, v);}
+    
+  
 
 
 
@@ -89,12 +107,16 @@ public class NameEntity_Type extends Annotation_Type {
     casImpl.getFSClassRegistry().addGeneratorForType((TypeImpl)this.casType, getFSGenerator());
 
  
-    casFeat_sent = jcas.getRequiredFeatureDE(casType, "sent", "util.Sentence", featOkTst);
-    casFeatCode_sent  = (null == casFeat_sent) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sent).getCode();
+    casFeat_label = jcas.getRequiredFeatureDE(casType, "label", "uima.cas.String", featOkTst);
+    casFeatCode_label  = (null == casFeat_label) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_label).getCode();
 
  
     casFeat_text = jcas.getRequiredFeatureDE(casType, "text", "uima.cas.String", featOkTst);
     casFeatCode_text  = (null == casFeat_text) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_text).getCode();
+
+ 
+    casFeat_sent = jcas.getRequiredFeatureDE(casType, "sent", "util.Sentence", featOkTst);
+    casFeatCode_sent  = (null == casFeat_sent) ? JCas.INVALID_FEATURE_CODE : ((FeatureImpl)casFeat_sent).getCode();
 
   }
 }

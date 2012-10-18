@@ -27,11 +27,13 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="src/main/java/lib/junit-3.8.1.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/mallet-deps.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/mallet-optimized.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/mallet-troveless-0.4.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/trove-1.1b5.jar"/>
-	<classpathentry kind="lib" path="src/main/java/lib/UEAstemmer.jar"/>
+	<classpathentry kind="lib" path="jar/junit-3.8.1.jar"/>
+	<classpathentry kind="lib" path="jar/mallet-deps.jar"/>
+	<classpathentry kind="lib" path="jar/mallet-optimized.jar"/>
+	<classpathentry kind="lib" path="jar/mallet-troveless-0.4.jar"/>
+	<classpathentry kind="lib" path="jar/trove-1.1b5.jar"/>
+	<classpathentry kind="lib" path="jar/UEAstemmer.jar"/>
+	<classpathentry kind="lib" path="jar/JNET-1.5.jar"/>
+	<classpathentry kind="lib" path="jar/lingpipe-4.1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

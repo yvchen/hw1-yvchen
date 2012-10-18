@@ -13,6 +13,10 @@ import org.apache.uima.util.Progress;
 
 import util.Sentence;
 
+/*
+ * CollectionReader reads the input file and separates different sentences by sentence id.
+ * It saves each sentence as a JCAS then make it enter Analysis Engine. 
+ */
 public class CollectionReader extends CollectionReader_ImplBase {
   
   private File fin;
@@ -21,7 +25,6 @@ public class CollectionReader extends CollectionReader_ImplBase {
   private String encoding = "UTF-8";
   
   public void initialize() throws ResourceInitializationException {
-    System.out.println("GG1");
     
     fin = new File(((String)getConfigParameterValue("InputFile")).trim());
     text = "";
@@ -58,7 +61,7 @@ public class CollectionReader extends CollectionReader_ImplBase {
   @Override
   public void close() throws IOException {
     // TODO Auto-generated method stub
-
+    buffer.close();
   }
 
   @Override
